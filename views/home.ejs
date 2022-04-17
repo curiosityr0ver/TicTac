@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto+Mono:wght@600&display=swap"
+            rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+            integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 id="header"> Tic Tac Toe <i id="retry" class="fa-solid fa-recycle"></i> </h1>
+
+        <div id="result">
+            <h2>Player 1 Won</h2>
+        </div>
+
+        <div class="board">
+            <table>
+                <tr>
+                    <td id="r1c1"></td>
+                    <td id="r1c2"></td>
+                    <td id="r1c3"></td>
+                </tr>
+                <tr>
+                    <td id="r2c1"></td>
+                    <td id="r2c2"></td>
+                    <td id="r2c3"></td>
+                </tr>
+                <tr>
+                    <td id="r3c1"></td>
+                    <td id="r3c2"></td>
+                    <td id="r3c3"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    <script>
+        var boardarray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var counter = 0;
+
+        $(".board").click(function (e) {
+            checkWin(boardarray);
+        });
+
+        $("#r1c1").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r1c1").css("backgroundColor", "#91C788");
+                $("#r1c1").text("0");
+                boardarray[0] = 1;
+            }
+            else {
+                $("#r1c1").css("backgroundColor", "#52734D");
+                $("#r1c1").text("X");
+                boardarray[0] = -1;
+            }
+        });
+        $("#r1c2").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r1c2").css("backgroundColor", "#91C788");
+                $("#r1c2").text("0");
+                boardarray[1] = 1;
+            }
+            else {
+                $("#r1c2").css("backgroundColor", "#52734D");
+                $("#r1c2").text("X");
+                boardarray[1] = -1;
+            }
+        }); $("#r1c3").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r1c3").css("backgroundColor", "#91C788");
+                $("#r1c3").text("0");
+                boardarray[2] = 1;
+            }
+            else {
+                $("#r1c3").css("backgroundColor", "#52734D");
+                $("#r1c3").text("X");
+                boardarray[2] = -1;
+            }
+        }); $("#r2c1").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r2c1").css("backgroundColor", "#91C788");
+                $("#r2c1").text("0");
+                boardarray[3] = 1;
+            }
+            else {
+                $("#r2c1").css("backgroundColor", "#52734D");
+                $("#r2c1").text("X");
+                boardarray[3] = -1;
+            }
+        }); $("#r2c2").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r2c2").css("backgroundColor", "#91C788");
+                $("#r2c2").text("0");
+                boardarray[4] = 1;
+            }
+            else {
+                $("#r2c2").css("backgroundColor", "#52734D");
+                $("#r2c2").text("X");
+                boardarray[4] = -1;
+            }
+        }); $("#r2c3").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r2c3").css("backgroundColor", "#91C788");
+                $("#r2c3").text("0");
+                boardarray[5] = 1;
+            }
+            else {
+                $("#r2c3").css("backgroundColor", "#52734D");
+                $("#r2c3").text("X");
+                boardarray[5] = -1;
+            }
+        }); $("#r3c1").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r3c1").css("backgroundColor", "#91C788");
+                $("#r3c1").text("0");
+                boardarray[6] = 1;
+            }
+            else {
+                $("#r3c1").css("backgroundColor", "#52734D");
+                $("#r3c1").text("X");
+                boardarray[6] = -1;
+            }
+        }); $("#r3c2").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r3c2").css("backgroundColor", "#91C788");
+                $("#r3c2").text("0");
+                boardarray[7] = 1;
+            }
+            else {
+                $("#r3c2").css("backgroundColor", "#52734D");
+                $("#r3c2").text("X");
+                boardarray[7] = -1;
+            }
+        }); $("#r3c3").click(function (e) {
+            counter++;
+
+            if (counter % 2 == 1) {
+                $("#r3c3").css("backgroundColor", "#91C788");
+                $("#r3c3").text("0");
+                boardarray[8] = 1;
+            }
+            else {
+                $("#r3c3").css("backgroundColor", "#52734D");
+                $("#r3c3").text("X");
+                boardarray[8] = -1;
+            }
+        });
+        $("#retry").click(function (e) {
+            location.reload();
+        });
+
+        function checkWin(arr) {
+            var won = false;
+
+            if (arr[0] == arr[1] && arr[1] == arr[2]) {
+
+                if (arr[0] != 0) {
+                    won = true;
+                }
+            }
+            if (arr[3] == arr[4] && arr[4] == arr[5]) {
+                if (arr[3] != 0) {
+                    won = true;
+                }
+            }
+            if (arr[6] == arr[7] && arr[7] == arr[8]) {
+                if (arr[6] != 0) {
+                    won = true;
+                }
+            }
+            if (arr[0] == arr[3] && arr[3] == arr[6]) {
+                if (arr[0] != 0) {
+                    won = true;
+                }
+            }
+            if (arr[1] == arr[4] && arr[4] == arr[7]) {
+                if (arr[1] != 0) {
+                    won = true;
+                }
+            }
+            if (arr[2] == arr[5] && arr[5] == arr[8]) {
+                if (arr[2] != 0) {
+                    won = true;
+                }
+            }
+            if (arr[0] == arr[4] && arr[4] == arr[8]) {
+                if (arr[0] != 0) {
+                    won = true;
+
+                }
+            }
+            if (arr[2] == arr[4] && arr[4] == arr[6]) {
+                if (arr[2] != 0) {
+                    won = true;
+
+                }
+            }
+            if (won == true) {
+                $("#retry").addClass("over");
+                $("body").css("backgroundColor", "#FFD365");
+                $("#result").css("visibility", "visible");
+                if (counter % 2 == 1) {
+                    $("#result").addClass("One");
+                    $("#result").text("Player One Won");
+                } else {
+                    $("#result").addClass("Two");
+                    $("#result").text("Player Two Won");
+                }
+            }
+        }
+
+    </script>
+
+</html>

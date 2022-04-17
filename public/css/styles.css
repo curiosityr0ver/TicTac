@@ -1,0 +1,57 @@
+body{
+    font-family: 'Roboto Mono';
+}
+#result {
+    visibility: hidden;
+position: absolute;
+top: 250px;
+left: 100px;
+border: 3px solid;
+padding: 15px;
+border-radius: 8px;
+font-size: 2rem;
+}
+.One {
+background-color: #B980F0;
+}
+.Two {
+ background-color:    #FE9898;
+}
+.Tie {
+background-color: #ECD662;
+}
+#header {
+    text-align: center;
+    
+    font-size: 3rem;
+}
+#retry {
+    transition: transform .2s; 
+    border-radius: 50px;
+    padding: 5px;
+}
+#retry:hover {
+  transform: scale(1.1);  
+}
+.over {
+  transform: scale(1.1);
+    color: #E83A14;
+}
+
+.board {
+    margin-left: 500px;
+    height: 600px;
+    width: 600px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 10px;
+    
+}
+td {
+    height: 190px;
+    width: 190px;
+    margin: 10px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 5rem;
+}
